@@ -1,0 +1,83 @@
+
+public class ContaBancaria {
+	int cont100, cont50, cont20, cont10, valorDoSaque;
+	String quantidadeDeNota;
+	
+	public ContaBancaria(){
+		 cont100 = 0;
+		 cont50 = 0;
+		 cont20 = 0;
+		 cont10 = 0;
+		 valorDoSaque = 0;
+		 quantidadeDeNota = "";
+	}
+
+	public String saque(int valorASacar) {
+
+		
+		valorDoSaque = valorASacar;
+		
+		if(valorASacar >= 100){
+			quantidadeDeNota = saqueAcimaOuIgualA100(valorASacar);
+			valorASacar = valorASacar%100;
+		}
+		
+		if(valorASacar >= 50){
+			quantidadeDeNota = saqueAcimaOuIgualA50(valorASacar, quantidadeDeNota);
+			valorASacar = valorASacar%50;
+		}
+		
+		if(valorASacar >= 20){
+			quantidadeDeNota = saqueAcimaOuIgualA20(valorASacar, quantidadeDeNota);
+			valorASacar = valorASacar%20;
+		}
+		
+		if(valorASacar >= 10){
+			quantidadeDeNota = saqueAcimaOuIgualA10(valorASacar, quantidadeDeNota);
+			valorASacar = valorASacar%10;
+		}
+		return quantidadeDeNota;
+	}
+  
+	private String saqueAcimaOuIgualA100(int valorASacar){
+		cont100 = valorASacar/100;
+		String quantidade = cont100+" nota: 100$";
+		return quantidade;
+	}
+	
+	private String saqueAcimaOuIgualA50(int valorASacar, String quantidade){
+		cont50 = valorASacar/50;	
+		
+		if(cont100 != 0){
+			String nota50 = cont50 +" nota: 50$";
+			quantidade = quantidade+" "+ nota50;					
+		}else{
+			return cont50+" nota: 50$";
+		}
+		return quantidade;
+	}
+	
+	private String saqueAcimaOuIgualA20(int valorASacar, String quantidade){
+		cont20 = valorASacar/20;
+		
+		if(cont100 != 0 || cont50 != 0){
+			String nota20 = cont20 +" nota: 20$";
+			quantidade = quantidade+" "+ nota20;
+		}else{
+			return cont20+" nota: 20$";
+		}
+		return quantidade;
+	}
+	
+	private String saqueAcimaOuIgualA10(int valorASacar, String quantidade){
+		cont10 = valorASacar/10;
+		
+		if(cont100 != 0 || cont50 != 0 || cont20 != 0){
+			String nota10 = cont10 +" nota: 10$";
+			quantidade = quantidade+" "+ nota10;
+		}else{
+			return cont10+" nota: 10$";
+		}
+		return quantidade;
+	}
+}

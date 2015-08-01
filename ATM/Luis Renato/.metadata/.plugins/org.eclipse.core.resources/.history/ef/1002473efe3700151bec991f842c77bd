@@ -1,0 +1,47 @@
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class SaqueDinheiroTest {
+	//Sacando_100_Reais_Retorna_1
+	//Sacando_200_Reais_Retorna_2
+	//Sacando_50_Reais_Retorna_1
+	//Sacando_150_Reais_Retorna_1_de_100_e_1_de_50
+	
+	@Test
+	public void Sacando_100_Reais_Retorna_1() {
+		String saque;
+		ContaBancaria conta = new ContaBancaria();
+		
+		saque = conta.saque(100);
+		
+		assertEquals("1nota: 100$", saque);
+	}
+	
+	@Test
+	public void Sacando_200_Reais_Retorna_2() {
+		String saque;
+		ContaBancaria conta = new ContaBancaria();
+		
+		saque = conta.saque(200);
+		
+		assertEquals("2nota: 100$", saque);
+	}
+	
+	@Test
+	public void Sacando_50_Reais_Retorna_1() {
+		String saque;
+		ContaBancaria conta = new ContaBancaria();
+		saque = conta.saque(50);
+		assertEquals("1nota: 50$", saque);
+	}
+	
+	@Test
+	public void Sacando_150_Reais_Retorna_1_de_100_e_1_de_50() {
+		String saque;
+		ContaBancaria conta = new ContaBancaria();
+		saque = conta.saque(150);
+		assertEquals("1nota: 100$1nota: 50$", saque);
+	}
+
+}

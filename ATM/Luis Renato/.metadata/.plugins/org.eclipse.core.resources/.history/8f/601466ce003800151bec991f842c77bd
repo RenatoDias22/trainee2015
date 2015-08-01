@@ -1,0 +1,56 @@
+
+public class ContaBancaria {
+	
+	public ContaBancaria(){}
+
+	public String saque(int valorASacar) {
+
+		int cont100 = 0;
+		int cont50 = 0;
+		int cont20 = 0;
+		int cont10 = 0;
+		String quantidadeDeNota = "";
+			
+		if(valorASacar >= 100){
+			cont100 = valorASacar/100;
+			quantidadeDeNota = cont100+" nota: 100$";
+			valorASacar = valorASacar%100;
+		}
+		
+		if(valorASacar >= 50){
+			cont50 = valorASacar/50;	
+			valorASacar = valorASacar%50;
+			if(cont100 != 0){
+				String nota50 = cont50 +" nota: 50$";
+				quantidadeDeNota = quantidadeDeNota+" "+ nota50;					
+			}else{
+				quantidadeDeNota = cont50+" nota: 50$";
+			}
+		}
+		
+		if(valorASacar >= 20){
+			cont20 = valorASacar/20;
+			valorASacar = valorASacar%20;
+			if(cont100 != 0 || cont50 != 0){
+				String nota20 = cont20 +" nota: 20$";
+				quantidadeDeNota = quantidadeDeNota+" "+ nota20;
+			}else{
+				quantidadeDeNota = cont20+" nota: 20$";
+			}
+		}
+		
+		if(valorASacar >= 10){
+			cont10 = valorASacar/10;
+			valorASacar = valorASacar%10;
+			if(cont100 != 0 || cont50 != 0 || cont20 != 0){
+				String nota10 = cont10 +" nota: 10$";
+				quantidadeDeNota = quantidadeDeNota+" "+ nota10;
+			}else{
+				quantidadeDeNota = cont10+" nota: 10$";
+			}
+		}
+		return quantidadeDeNota;
+	}
+	
+	
+}

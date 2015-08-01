@@ -1,0 +1,91 @@
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class SaqueDinheiroTest {
+	//Sacando_100_Reais_Retorna_1
+	//Sacando_200_Reais_Retorna_2
+	//Sacando_50_Reais_Retorna_1
+	//Sacando_150_Reais_Retorna_1_de_100_e_1_de_50
+	//Sacando_250_Reais_Retorna_2_de_100_e_1_de_50
+	//Sacando_20_Reais_Retorna_1_de_20
+	//Sacando_70_Reais_Retorna_1_de_50_e_1_de_20
+	//Sacando_10_Reais_Retorna_1_de_10
+	//Sacando_30_Reais_Retorna_1_de_20_e_1_de_10
+	
+	@Test
+	public void Sacando_100_Reais_Retorna_1() {
+		String saque;
+		ContaBancaria conta = new ContaBancaria();
+		
+		saque = conta.saque(100);
+		
+		assertEquals("1 nota: 100$", saque);
+	}
+	
+	@Test
+	public void Sacando_200_Reais_Retorna_2() {
+		String saque;
+		ContaBancaria conta = new ContaBancaria();
+		
+		saque = conta.saque(200);
+		
+		assertEquals("2 nota: 100$", saque);
+	}
+	
+	@Test
+	public void Sacando_50_Reais_Retorna_1() {
+		String saque;
+		ContaBancaria conta = new ContaBancaria();
+		saque = conta.saque(50);
+		assertEquals("1 nota: 50$", saque);
+	}
+	
+	@Test
+	public void Sacando_150_Reais_Retorna_1_de_100_e_1_de_50() {
+		String saque;
+		ContaBancaria conta = new ContaBancaria();
+		saque = conta.saque(150);
+		assertEquals("1 nota: 100$ 1 nota: 50$", saque);
+	}
+	
+	@Test
+	public void Sacando_250_Reais_Retorna_2_de_100_e_1_de_50() {
+		String saque;
+		ContaBancaria conta = new ContaBancaria();
+		saque = conta.saque(250);
+		assertEquals("2 nota: 100$ 1 nota: 50$", saque);
+	}
+	
+	@Test
+	public void Sacando_20_Reais_Retorna_1_de_20() {
+		String saque;
+		ContaBancaria conta = new ContaBancaria();
+		saque = conta.saque(20);
+		assertEquals("1 nota: 20$", saque);
+	}
+	
+	@Test
+	public void Sacando_70_Reais_Retorna_1_de_50_e_1_de_20() {
+		String saque;
+		ContaBancaria conta = new ContaBancaria();
+		saque = conta.saque(70);
+		assertEquals("1 nota: 50$ 1 nota: 20$", saque);
+	}
+	
+	@Test
+	public void Sacando_10_Reais_Retorna_1_de_10() {
+		String saque;
+		ContaBancaria conta = new ContaBancaria();
+		saque = conta.saque(10);
+		assertEquals("1 nota: 10$", saque);
+	}
+	
+	@Test
+	public void Sacando_30_Reais_Retorna_1_de_20_e_1_de_10() {
+		String saque;
+		ContaBancaria conta = new ContaBancaria();
+		saque = conta.saque(70);
+		assertEquals("1 nota: 20$ 1 nota: 10$", saque);
+	}
+}
