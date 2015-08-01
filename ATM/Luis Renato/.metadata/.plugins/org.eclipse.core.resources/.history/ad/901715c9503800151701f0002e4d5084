@@ -31,15 +31,6 @@ public class ContaBancaria {
 		return prePararQuantiaASacar(valorASacar, valorDoSaqueTotal, valorDoSaque,5);
 		
 	}
-	
-	public String saqueComLimiteDeQuantidadeDeNotas(int valorASacar, int notas){
-
-		valorDoSaqueTotal = valorASacar;
-		valorDoSaque = valorASacar;
-		return prePararQuantiaASacar(valorASacar, valorDoSaqueTotal, valorDoSaque, notas);
-		
-	}
-	
 	private String prePararQuantiaASacar(int valorASacar,int valorDoSaqueTotal,int valorDoSaque, int notas){
 		setQuantidadeDeNotas(notas);
 		if(valorASacar >= 100){
@@ -86,6 +77,57 @@ public class ContaBancaria {
 			String valorSaque = "Valor do Saque:R$"+valorDoSaqueTotal+" - ";
 			return valorSaque + quantidadeDeNota;
 		}
+	}
+	public String saqueComQuantidadeDeNotas(int valorASacar, int notas){
+
+		valorDoSaqueTotal = valorASacar;
+		valorDoSaque = valorASacar;
+		return prePararQuantiaASacar(valorASacar, valorDoSaqueTotal, valorDoSaque, notas);
+		
+//		if(valorASacar >= 100){
+//			quantidadeDeNota = saqueAcimaOuIgualA100(valorASacar);
+//			if(qtd100 < cont100){
+//				valorASacar = valorASacar - qtd100*100;
+//			}else{
+//				valorASacar = valorASacar%100;
+//			}
+//		}
+//		
+//		if(valorASacar >= 50){
+//			quantidadeDeNota = saqueAcimaOuIgualA50(valorASacar, quantidadeDeNota);
+//			if(qtd50 < cont50){
+//				valorASacar = valorASacar - qtd50*50;
+//			}else{
+//				valorASacar = valorASacar%50;
+//			}
+//		}
+//		
+//		if(valorASacar >= 20){
+//			quantidadeDeNota = saqueAcimaOuIgualA20(valorASacar, quantidadeDeNota);
+//			if(qtd20 < cont20){
+//				valorASacar = valorASacar - qtd20*20;
+//			}else{
+//				valorASacar = valorASacar%20;
+//			}
+//		}
+//		
+//		if(valorASacar >= 10){
+//			quantidadeDeNota = saqueAcimaOuIgualA10(valorASacar, quantidadeDeNota);
+//			if(qtd10 > cont10){
+//				valorASacar = valorASacar - qtd10*10;
+//			}else{
+//				valorASacar = valorASacar%10;
+//			}
+//			
+//		}
+//		int qtdTotalNotas = qtd10*10 + qtd20*20 + qtd50*50 + qtd100*100;
+//		
+//		if(NotasSuficientes(valorDoSaqueTotal,qtdTotalNotas)){
+//			return "Quantidade de notas insuficiente para esse valor!";
+//		}else{
+//			String valorSaque = "Valor do Saque:R$"+valorDoSaqueTotal+" - ";
+//			return valorSaque + quantidadeDeNota;
+//		}
 	}
 	
 	private boolean NotasSuficientes(int total, int notas){

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="SaqueDinheiroTest" project="Treinee2015" tests="18" started="18" failures="0" errors="0" ignored="0">
+  <testsuite name="SaqueDinheiroTest" time="0.007">
+    <testcase name="Sacando_1020_Reais_Para_Quantidade_de_notas_Ate_6_Retorna_6_de_100_e_6_de_50_6_de_20" classname="SaqueDinheiroTest" time="0.003"/>
+    <testcase name="Sacando_850_Reais_Retorna_5_de_100_e_5_de_50_e_5_de_20" classname="SaqueDinheiroTest" time="0.0"/>
+    <testcase name="Sacando_390_Reais_Retorna_3_de_100_e_1_de_50_e_2_de_20" classname="SaqueDinheiroTest" time="0.0"/>
+    <testcase name="Sacando_20_Reais_Retorna_1_de_20" classname="SaqueDinheiroTest" time="0.001"/>
+    <testcase name="Sacando_200_Reais_Retorna_2" classname="SaqueDinheiroTest" time="0.0"/>
+    <testcase name="Sacando_10_Reais_Retorna_1_de_10" classname="SaqueDinheiroTest" time="0.0"/>
+    <testcase name="Sacando_790_Reais_Retorna_5_de_100_e_5_de_50_e_2_de_20" classname="SaqueDinheiroTest" time="0.0"/>
+    <testcase name="Sacando_150_Reais_Retorna_1_de_100_e_1_de_50" classname="SaqueDinheiroTest" time="0.001"/>
+    <testcase name="Sacando_1000_Reais_Para_Quantidade_de_notas_Ate_5_Retorna_Exception" classname="SaqueDinheiroTest" time="0.0"/>
+    <testcase name="Sacando_100_Reais_Retorna_1" classname="SaqueDinheiroTest" time="0.0"/>
+    <testcase name="Sacando_180_Reais_Retorna_1_de_100_e_1_de_50_e_1_de_20_e_1_de_10" classname="SaqueDinheiroTest" time="0.0"/>
+    <testcase name="Sacando_250_Reais_Retorna_2_de_100_e_1_de_50" classname="SaqueDinheiroTest" time="0.0"/>
+    <testcase name="Sacando_80_Reais_Retorna_1_de_50_e_1_de_20_e_1_de_10" classname="SaqueDinheiroTest" time="0.001"/>
+    <testcase name="Sacando_1000_Reais_Para_Quantidade_de_notas_Ate_7_Retorna_7_de_100_e_6_de_50" classname="SaqueDinheiroTest" time="0.0"/>
+    <testcase name="Sacando_30_Reais_Retorna_1_de_20_e_1_de_10" classname="SaqueDinheiroTest" time="0.0"/>
+    <testcase name="Sacando_70_Reais_Retorna_1_de_50_e_1_de_20" classname="SaqueDinheiroTest" time="0.0"/>
+    <testcase name="Sacando_900_Reais_Retorna_5_de_100_e_5_de_50_e_5_de_20_e_5_de_10" classname="SaqueDinheiroTest" time="0.0"/>
+    <testcase name="Sacando_50_Reais_Retorna_1" classname="SaqueDinheiroTest" time="0.001"/>
+  </testsuite>
+</testrun>

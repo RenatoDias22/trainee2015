@@ -164,7 +164,7 @@ public class SaqueDinheiroTest {
 	public void Sacando_1000_Reais_Para_Quantidade_de_notas_Ate_7_Retorna_7_de_100_e_6_de_50() {
 		String saque;
 		ContaBancaria conta = new ContaBancaria();
-		saque = conta.saqueComLimiteDeQuantidadeDeNotas(1000,7);
+		saque = conta.saqueComQuantidadeDeNotas(1000,7);
 		assertEquals("Valor do Saque:R$1000 - 7 nota: 100$ 6 nota: 50$", saque);
 	}
 	
@@ -172,7 +172,7 @@ public class SaqueDinheiroTest {
 	public void Sacando_1020_Reais_Para_Quantidade_de_notas_Ate_6_Retorna_6_de_100_e_6_de_50_6_de_20() {
 		String saque;
 		ContaBancaria conta = new ContaBancaria();
-		saque = conta.saqueComLimiteDeQuantidadeDeNotas(1020,6);
+		saque = conta.saqueComQuantidadeDeNotas(1020,6);
 		assertEquals("Valor do Saque:R$1020 - 6 nota: 100$ 6 nota: 50$ 6 nota: 20$", saque);
 	}
 }
