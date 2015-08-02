@@ -24,9 +24,8 @@ public class ContaBancaria {
 		 qtd10 = valor;
 		
 	}
-	
 	public String saque(int valorASacar){
-		
+
 		valorDoSaqueTotal = valorASacar;
 		valorDoSaque = valorASacar;
 		return prePararQuantiaASacar(valorASacar, valorDoSaqueTotal, valorDoSaque,5);
